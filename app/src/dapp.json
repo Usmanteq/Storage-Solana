@@ -1,0 +1,95 @@
+{
+  "address": "5x1PoPUPcNtR6czzvRqu49n2WMGmTYPxrN9zEVH9XpM3",
+  "metadata": {
+    "name": "dapp",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "initialize",
+      "discriminator": [
+        175,
+        175,
+        109,
+        31,
+        13,
+        152,
+        155,
+        237
+      ],
+      "accounts": [
+        {
+          "name": "initial_account",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "update_value",
+      "discriminator": [
+        180,
+        106,
+        97,
+        193,
+        52,
+        170,
+        46,
+        151
+      ],
+      "accounts": [
+        {
+          "name": "storage_account",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "value",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Init",
+      "discriminator": [
+        147,
+        209,
+        94,
+        133,
+        122,
+        199,
+        165,
+        202
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "Init",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "value",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ]
+}
